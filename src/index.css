@@ -10,7 +10,7 @@ body{
     display: flex;
     width: 100%;
     height: 80px;
-    position: fixed absolute;
+    position: fixed;
     color: white;
     background-color: black;
     opacity: 0.8;
@@ -75,13 +75,104 @@ body{
 }
 
 /* Home */
-.firstbanner{
-    height: fit-content;
+.first-banner{
+    background-image: url(assets/banner.jpg);
+    background-size: cover;
+    height: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-left: 50px;
+    padding-right: 50px;
 }
-.firstbanner > h1{
-    background-color: black;
-    opacity: 0.8;
 
+.btn-showmore{
+    background-color: #82ABC4;
+    margin-top: 10px;
+    width: 130px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn-showmore:hover{
+    background-color: white;
+    color: #82ABC4;
+    font-weight: bold;
+}
+
+.text-banner{
+    background-color: transparent;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    justify-content: center;
+}
+.text-banner > h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    font-size: 4em;
+    text-transform: capitalize;
+    color: #82ABC4;
+    
+}
+.text-banner > p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight:bold;
+    color: white;
+    margin-top: 25px;
+}
+
+.why{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+}
+.title-why{
+    margin-bottom: 50px;
+}
+.title-why > h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 30px;
+}
+.isi-why{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    gap: 50px;
+    max-width: 1500px;
+    height: 300px;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    padding: 30px;
+}
+.isi-why > p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.videobanner{
+    background-color: #82ABC4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    height: fit-content;
+    gap: 50px;
+}
+.videobanner > h1{
     position: absolute;
     top: 25%;
     right: 10%;
@@ -91,15 +182,46 @@ body{
     text-transform: uppercase;
 }
 video{
-    width: 100%;
+    width: 700px;
     height: max-content;
     object-fit: cover;
+    border-radius: 30px;
+}
+.text-video{
+    background-color: ;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    text-align: justify;
+}
+.text-video > h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+}
+.text-video > p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: white;
+    max-width: 950px;
 }
 
     /* CardHome */
-
+.judul-card{
+    background-color: #FFF2E2 ;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-top: 50px;
+    padding-left: 20px;
+}
 .cardhome{
-    background-color: #CEE5B7;
+    background-color: #FFF2E2;
     width: 100vw;
     height: 500px;
     display: flex;
@@ -151,7 +273,7 @@ video{
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    background-color: #FFF2E2;
+    background-color: white;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 25px;
