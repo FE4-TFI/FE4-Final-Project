@@ -6,6 +6,7 @@ import imgSecondCard1 from '../assets/recycle.png'
 import imgSecondCard2 from '../assets/reuse.png'
 import imgSecondCard3 from '../assets/reduce.png'
 
+
 function Home() {
     return (
         <>

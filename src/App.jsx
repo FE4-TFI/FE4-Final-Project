@@ -7,6 +7,7 @@ import logo from "./assets/Logo.png"
 import Login from "./Login"
 
 
+
 function App() {
   return (
     <>
@@ -31,11 +32,12 @@ function App() {
             <li>
               <Link className="linknav" to="/Lapor"> Lapor </Link>
             </li>
-            <li>
+            {/* <li>
               <Link className="linknav" to="/LoginForm">Login</Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
+       
       </div>
 
 
@@ -43,7 +45,7 @@ function App() {
         <Route exact path="/Home" element={<Home />} />
         <Route path="/Edukasi" element={<Edukasi />} />
         <Route path="/Lapor" element={<Lapor />} />
-        <Route path="/Login" element={<Login />} />
+        {/* <Route path="/Login" element={<Login />} /> */}
         <Route path="*" element={<NotFound />} />
       </Routes>
 
