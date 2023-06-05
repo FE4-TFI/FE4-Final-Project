@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { loginUser } from "../redux/authSlice";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const LoginForm = () => {
     const dispatch = useDispatch();
@@ -26,6 +27,18 @@ const LoginForm = () => {
             password: password,
         };
         try {
+            // Menggunakan API untuk validasi login
+            const response = await axios.get(
+                `https://6451089fe1f6f1bb22a608b7.mockapi.io/users?username=${username}&password=${password}`
+            );
+            if (response.data.length === 0) {
+                throw new Error("Username atau password tidak valid");
+            }
+            const user = response.data[0];
+            if (user.password !== password) {
+                throw new Error("Username atau password tidak valid")
+            }
+
             await dispatch(loginUser(userData));
             setLoading(false);
             setUsername("");
@@ -33,7 +46,7 @@ const LoginForm = () => {
             navigate("/home"); // Navigate to home page after successful login
         } catch (error) {
             setLoading(false);
-            setErrorMessage("Login failed. Please try again.");
+            setErrorMessage(error.message || "Login failed. Please try again.");
         }
     };
 
@@ -44,13 +57,28 @@ const LoginForm = () => {
             <form className="form-group custom-form">
                 <div>
                     <label>Username:</label>
-                    <input type="text" value={username} onChange={handleUsernameChange} />
-                </div>
-                <div>
+                    <input
+                        className="form-control"
+                        type="text"
+                        value={username}
+                        onChange={handleUsernameChange}
+                    />
+
                     <label>Password:</label>
-                    <input type="password" value={password} onChange={handlePasswordChange} />
+                    <input
+                        className="form-control"
+                        type="password"
+                        value={password}
+                        onChange={handlePasswordChange}
+                    />
                 </div>
-                <button type="button" onClick={handleLogin} disabled={loading}>
+
+                <button
+                    className="btn btn-success"
+                    type="button"
+                    onClick={handleLogin}
+                    disabled={loading}
+                >
                     {loading ? "Logging in..." : "Login"}
                 </button>
             </form>

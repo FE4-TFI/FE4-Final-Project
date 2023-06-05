@@ -26,6 +26,29 @@ const RegisterForm = () => {
     };
 
     const handleRegister = async () => {
+
+        setErrorMessage("");
+        setSuccessMessage("")
+        if (!username) {
+            setErrorMessage("Username masih kosong");
+            return;
+        }
+
+        if (!email) {
+            setErrorMessage("Email masih kosong");
+            return;
+        }
+        if (!email.includes("@")) {
+            setErrorMessage("Email tidak valid");
+            return;
+        }
+
+        if (!password) {
+            setErrorMessage("Password masih kosong");
+            return;
+        }
+
+
         setLoading(true);
         const userData = {
             username: username,
@@ -52,25 +75,25 @@ const RegisterForm = () => {
             <h2>DAFTAR</h2>
             {successMessage && <p>{successMessage}</p>}
             {errorMessage && <p>{errorMessage}</p>}
-            <form className="">
+            <form className="form-group custom-form">
                 <div>
-                    <label>Nama:</label>
-                    <input type="text" value={username} onChange={handleUsernameChange} />
+                    <label>Username</label>
+                    <input className="form-control" type="text" placeholder="Masukkan Nama User" value={username} onChange={handleUsernameChange} />
                 </div>
                 <div>
                     <label htmlFor="">Email</label>
-                    <input type="email" value={email} onChange={handleEmailChange} />
+                    <input className="form-control" placeholder="Masukkan Email" type="email" value={email} onChange={handleEmailChange} />
                 </div>
                 <div>
-                    <label>Password:</label>
-                    <input type="password" value={password} onChange={handlePasswordChange} />
+                    <label>Password</label>
+                    <input className="form-control" placeholder="Masukkan Password" type="password" value={password} onChange={handlePasswordChange} />
                 </div>
-                <button type="button" onClick={handleRegister} disabled={loading}>
+                <button className="btn btn-success" type="button" onClick={handleRegister} disabled={loading}>
                     {loading ? "Mendaftarkan Akun..." : "Daftar"}
                 </button>
             </form>
             <p>
-                Already have an account? <Link to="/login">Login</Link>
+                Sudah punya akun? <Link to="/login">Login</Link>
             </p>
         </div>
     );
