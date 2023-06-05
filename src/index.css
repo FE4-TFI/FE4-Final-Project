@@ -1,171 +1,175 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
-body{
-    background-color: white;
+body {
+  background-color: white;
 }
-.navbar{
-    background-color: transparent;
-    display: flex;
-    width: 100%;
-    height: 80px;
-    position: fixed absolute;
-    color: white;
-    background-color: black;
-    opacity: 0.8;
+.navbar {
+  background-color: transparent;
+  display: flex;
+  width: 100%;
+  height: 80px;
+  position: fixed absolute;
+  color: white;
+  background-color: black;
+  opacity: 0.8;
 }
-.navbar > nav{
-    height: 80px;
-    width: 100%;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-self: center;
-    flex-direction: row;
+.navbar > nav {
+  height: 80px;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  flex-direction: row;
 }
-.navbar > nav > ul{
-    height: 100%;
-    width: 100%;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    gap: 80px;
-    flex-direction:row;
-    padding-right: 80px;
+.navbar > nav > ul {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 80px;
+  flex-direction: row;
+  padding-right: 80px;
 }
-.navbar > nav > ul > li{
-    background-color: transparent;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    list-style-type:none;
-    color: black;
+.navbar > nav > ul > li {
+  background-color: transparent;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  list-style-type: none;
+  color: black;
 }
-.linknav{
-    text-decoration: none;
-    color: white;
-    font-family: Arial;
-    font-weight: 600;
+.linknav {
+  text-decoration: none;
+  color: white;
+  font-family: Arial;
+  font-weight: 600;
 }
-.logo{
-    display: flex;
-    flex-direction: row;
-    height: 50px;
-    width: 50px;
-    padding-left: 80px;
+.logo {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  width: 50px;
+  padding-left: 80px;
 }
-.logo > img{
-    width: 100%;
-    height: 100%;
+.logo > img {
+  width: 100%;
+  height: 100%;
 }
-.brand{
-    display: flex;
-    flex-direction: row;
-    width: 300px;
-    justify-content: center;
-    align-items: center;
+.brand {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
 }
-.brand > h1{
-    font-family: Arial;
-    font-style:italic;
-    font-weight: lighter;
+.brand > h1 {
+  font-family: Arial;
+  font-style: italic;
+  font-weight: lighter;
 }
 
 /* Home */
-.firstbanner{
-    height: fit-content;
+.firstbanner {
+  height: fit-content;
 }
-.firstbanner > h1{
-    background-color: black;
-    opacity: 0.8;
+.firstbanner > h1 {
+  background-color: black;
+  opacity: 0.8;
 
-    position: absolute;
-    top: 25%;
-    right: 10%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bolder;
-    color: white;
-    text-transform: uppercase;
+  position: absolute;
+  top: 25%;
+  right: 10%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bolder;
+  color: white;
+  text-transform: uppercase;
 }
-video{
-    width: 100%;
-    height: max-content;
-    object-fit: cover;
-}
-
-    /* CardHome */
-
-.cardhome{
-    background-color: #CEE5B7;
-    width: 100vw;
-    height: 500px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-}
-.card1{
-    background-color:#2552AF;
-    height: 350px;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-}
-.card2{
-    background-color:#F5A791;
-    height: 350px;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-}
-.card3{
-    background-color:#5A514A;
-    height: 350px;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-}
-.image-card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-.image-card > img{
-    max-width: 400px;
-    max-height: 250px;
-}
-.img-bio{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    background-color: #FFF2E2;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 25px;
-    padding-right: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-.img-bio > p{
-    max-width: 250px;
-    word-spacing: 10px;
-    font-family: Arial;
+video {
+  width: 100%;
+  height: max-content;
+  object-fit: cover;
 }
 
-.second-image{
-    max-width: 100px;
-    max-height: 100px;
+/* CardHome */
+
+.cardhome {
+  background-color: #cee5b7;
+  width: 100vw;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.card1 {
+  background-color: #2552af;
+  height: 350px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+}
+.card2 {
+  background-color: #f5a791;
+  height: 350px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+}
+.card3 {
+  background-color: #5a514a;
+  height: 350px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+}
+.image-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.image-card > img {
+  max-width: 400px;
+  max-height: 250px;
+}
+.img-bio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: #fff2e2;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.img-bio > p {
+  max-width: 250px;
+  word-spacing: 10px;
+  font-family: Arial;
+}
+
+.second-image {
+  max-width: 100px;
+  max-height: 100px;
+}
+.custom-form {
+  width: 100%;
+  max-width: 400px;
 }

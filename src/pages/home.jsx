@@ -5,12 +5,13 @@ import imgCard3 from '../assets/card3.jpg'
 import imgSecondCard1 from '../assets/recycle.png'
 import imgSecondCard2 from '../assets/reuse.png'
 import imgSecondCard3 from '../assets/reduce.png'
+
 function Home() {
     return (
         <>
             <div className="allhome">
                 <div className="firstbanner">
-                    <video src={BgVideo} autoPlay muted loop className="video-bg"/>
+                    <video src={BgVideo} autoPlay muted loop className="video-bg" />
                     <div className="bg-overlay"></div>
                     <h1>Keep the sea plastic free</h1>
                 </div>
@@ -47,8 +48,9 @@ function Home() {
                     </div>
 
                 </div>
-                
+
             </div>
+
         </>
     )
 }
