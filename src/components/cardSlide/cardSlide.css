@@ -1,0 +1,11 @@
+.card {
+    @apply flex flex-col justify-end rounded-md h-64 w-48 px-4 py-6 text-white text-center md:h-72 md:w-52
+}
+
+.card-title {
+    @apply font-medium
+}
+
+.btn-baca {
+    @apply bg-gray-500 mx-auto mt-2 px-4 py-2 text-sm text-white rounded-md hover:bg-gray-600 cursor-pointer
+}
