@@ -20,7 +20,7 @@ function App() {
           </div>
           <ul>
             <li>
-              <Link className="linknav" to="/Home"> Home </Link>
+              <Link className="linknav" to="/"> Home </Link>
             </li>
 
             <li>
@@ -36,7 +36,7 @@ function App() {
 
 
       <Routes>
-        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/Edukasi" element={<Edukasi />} />
         <Route path="/Lapor" element={<Lapor />} />
         <Route path="*" element={<NotFound />} />

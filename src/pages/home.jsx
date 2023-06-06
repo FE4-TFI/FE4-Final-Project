@@ -1,11 +1,24 @@
 // All Import
-import BgVideo from '../assets/recycle.mp4'
+import recyclevid from '../assets/recycle.mp4'
+import reusevid from '../assets/reuse.mp4'
+import reducevid from '../assets/reduce.mp4'
+import EducationVector from '../assets/education-vector.png'
+import MembantuVector from '../assets/membantu.png'
+import MengingatkanVector from '../assets/mengingatkan.png'
+import MerawatVector from '../assets/merawat.png'
+import imgHome from '../assets/home.png'
 import imgCard1 from '../assets/card1.jpg'
 import imgCard2 from '../assets/card2.jpg'
 import imgCard3 from '../assets/card3.jpg'
 import imgSecondCard1 from '../assets/recycle.png'
 import imgSecondCard2 from '../assets/reuse.png'
 import imgSecondCard3 from '../assets/reduce.png'
+import imgPartnership from '../assets/skilvul logo.png'
+import noPlastic from '../assets/noplastic.png'
+import keepOcean from '../assets/keepocean.png'
+import lovePlanet from '../assets/loveplanet.png'
+import noBottle from '../assets/nobottle.png'
+import bringCup from '../assets/bringcup.png'
 // End All Import
 
 
@@ -16,12 +29,49 @@ function Home() {
                 <div className="first-banner">
                     
                     <div className="text-banner">
-                        <h1> Lingkungan</h1>
-                        <h1> cerminan kehidupan </h1>
+                        <h1> Jadilah anak muda</h1>
+                        <h1> yang cinta Lingkungan </h1>
                         <p> Ayo bersama kurangi sampah demi kesehatan lingkungan yang lebih baik</p>
                         <a className="btn-showmore" href=''> Show More </a>
                     </div>
 
+                    <div className="img-banner">
+                        <img src={imgHome} alt="" />
+                    </div>
+
+                </div>
+
+                <div className="tujuan-savi">
+                    <div className="title-tujuan">
+                        <h1>Apa tujuan savi?</h1>
+                    </div>
+                    <div className="isi-tujuan">
+                        <div className="container-tujuan">
+                            <div className="isi-gambar">
+                                <img className="first-image" src={EducationVector} alt="" />
+                                <h1> Mengedukasi </h1>
+                                <p> Memberikan edukasi terkait bahaya sampah plastik dan cara penanggulangannya </p>
+                            </div>
+
+                            <div className="isi-gambar">
+                                <img className="first-image" src={MembantuVector} alt="" />
+                                <h1> Membantu</h1>
+                                <p> Memberikan bantuan dalam bentuk digital </p>
+                            </div>
+
+                            <div className="isi-gambar">
+                                <img className="first-image" src={MengingatkanVector} alt="" />
+                                <h1> Mengingatkan </h1>
+                                <p> Mengingatkan masyarakat untuk tetap peduli akan lingkungan terhadap sampah plastik </p>
+                            </div>
+
+                            <div className="isi-gambar">
+                                <img className="first-image" src={MerawatVector} alt="" />
+                                <h1> Merawat </h1>
+                                <p> Merawat lingkungan sekitar dari banyaknya sampah plastik </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="why">
@@ -29,30 +79,72 @@ function Home() {
                         <h1>Mengapa kita harus mengurangi sampah plastik?</h1>
                     </div>
                     <div className="isi-why">
-                        <p> Plastik adalah salah satu pencemar lingkungan yang paling serius. Sampah plastik yang tidak terurai membanjiri lautan, sungai, dan lahan, menyebabkan kerusakan ekosistem dan membahayakan kehidupan laut dan satwa liar. Plastik juga membutuhkan waktu sangat lama untuk terurai, sehingga menumpuk dalam jumlah besar di tempat pembuangan akhir atau berakhir sebagai limbah liar. </p>
-                        <p> Plastik dapat melepaskan bahan kimia berbahaya ke lingkungan. Beberapa jenis plastik mengandung zat-zat seperti bisphenol A (BPA) dan ftalat, yang dapat masuk ke dalam makanan dan minuman yang dikemas dalam plastik. Zat-zat ini dapat merusak sistem hormonal dan dikaitkan dengan berbagai masalah kesehatan, termasuk gangguan perkembangan, gangguan reproduksi, dan risiko penyakit kronis. </p>
-                        <p> Ketika plastik mencemari lingkungan, itu juga merusak ekosistem yang kompleks. Hewan laut sering kali tersangkut dalam sampah plastik atau memakan fragmen kecilnya, yang dapat menyebabkan cedera atau kematian. Akibatnya, rantai makanan terganggu dan dapat berdampak pada ekosistem secara keseluruhan. </p>
+                        <div className="slice-why1">
+                            <div className="image-desc">
+                                <div className="desc">
+                                    <h2>Menjaga habitat hewan air</h2>
+                                    <p>sampah plastik dapat mengganggu habitat hewan perairan lho</p>
+                                </div>
+                                <img src={keepOcean} alt="" />
+                            </div>
+                            <div className="image-desc">
+                                <div className="desc">
+                                    <h2>Menjaga kesehatan dunia</h2>
+                                    <p>Emangnya kamu mau tinggal di lingkungan yang kotor? </p>
+                                </div>
+                                <img src={lovePlanet} alt="" />
+                                
+                            </div>
+                        </div>
+                        
+                        <div className="slice-why2">
+                            <img src={noPlastic} alt="" />
+                        </div>
+                        <div className="slice-why3">
+                            <div className="image-desc">
+                                <img src={noBottle} alt="" />
+                                <div className="desc">
+                                    <h2>Sampah yang sulit</h2>
+                                    <p>Sampah plastik sangat sulit didaur ulang dan membutuhkan waktu yang sangat lama</p>
+                                </div>
+                            </div>
+                            <div className="image-desc">
+                                <img src={bringCup} alt="" />
+                                <div className="desc">
+                                    <h2>Cangkir Pribadi</h2>
+                                    <p>Bisa mengurangi dan memberikan efektifitas kepada sampah plastik lho</p>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
                 <div className="videobanner">
-                    <video src={BgVideo} autoPlay muted loop className="video-bg"/>
-                    <div className="text-video">
-                        <h1> Bagaimana Process Recycle Bekerja? </h1>
-                        <p> Proses daur ulang, atau recycle, melibatkan pengumpulan, pengolahan, dan penggunaan kembali bahan bekas atau limbah untuk menghasilkan produk baru.
+                    <div className="isi-video">
+                        <video src={reusevid} autoPlay muted loop className="video-bg"/>
+                        <div className="text-video">
+                            <h1> Reuse </h1>
+                            <h2> Lihat bagaimana barang tidak terpakai diolah kembali menjadi layak pakai dan mulailah mencobanya</h2>
+                            <a className="btn-selengkapnya" href=''> Selengkapnya &rarr;</a>
+                        </div>
+                    </div>
 
-                            < br/> < br/> <b>1. Pengumpulan </b> <br /> Tahap pertama dalam proses recycle adalah pengumpulan bahan bekas atau limbah. Ini bisa dilakukan melalui program pengumpulan sampah terpisah di rumah, kantor, atau tempat umum, atau melalui pusat daur ulang yang khusus.
+                    <div className="isi-video">
+                        <video src={reducevid} autoPlay muted loop className="video-bg"/>
+                        <div className="text-video">
+                            <h1> Reduce </h1>
+                            <h2> Ayo berganti menggunakan bahan non-plastik dalam kehidupan sehari-hari</h2>
+                            <a className="btn-selengkapnya" href=''> Selengkapnya &rarr;</a>
+                        </div>
+                    </div>
 
-                            < br/> < br/> <b>2. Pemisahan </b><br /> Setelah pengumpulan, bahan bekas atau limbah perlu dipisahkan menjadi kategori yang sesuai. Misalnya, kertas harus dipisahkan dari plastik, logam dari kaca, dan sebagainya. Pemisahan ini penting karena bahan yang berbeda memerlukan proses recycle yang berbeda.
-
-                            < br/> < br/> <b>3. Pengolahan</b> <br /> Setelah pemisahan, bahan bekas atau limbah tersebut perlu diolah agar siap untuk direcycle. Ini melibatkan proses seperti mencuci, menghancurkan, dan memotong bahan menjadi ukuran yang lebih kecil. Proses ini bertujuan untuk mempersiapkan bahan untuk tahap selanjutnya, di mana mereka akan diubah menjadi bahan baku baru.
-
-                            < br/> < br/> <b>4. Penciptaan bahan baku baru </b><br /> Bahan bekas atau limbah yang sudah diolah kemudian diubah menjadi bahan baku baru melalui proses tertentu. Misalnya, kertas bekas diolah menjadi serat pulp yang digunakan untuk membuat kertas baru, plastik bekas dilebur dan dicetak ulang menjadi produk plastik baru, atau logam bekas dilebur dan dibentuk menjadi bahan logam baru.
-
-                            < br/> < br/> <b>5. Produksi produk baru</b> <br /> Bahan baku baru yang dihasilkan dari recycle digunakan dalam proses produksi untuk membuat produk baru. Contohnya, kertas baru yang dibuat dari serat pulp kertas bekas dapat digunakan untuk mencetak majalah atau kertas kemasan. Plastik yang direcycle dapat digunakan untuk membuat botol plastik baru atau produk plastik lainnya.
-
-                            < br/> < br/> <b> 6. Distribusi dan penggunaan ulang </b><br /> Produk baru yang dihasilkan dari recycle didistribusikan dan digunakan kembali oleh konsumen. Dengan menggunakan produk yang terbuat dari bahan daur ulang, kita dapat mengurangi permintaan akan sumber daya alam baru dan mengurangi jumlah limbah yang masuk ke tempat pembuangan akhir.
-
-                            < br/> < br/> Penting untuk diingat bahwa proses recycle dapat bervariasi tergantung pada jenis bahan yang didaur ulang dan sistem recycle yang ada di suatu negara atau daerah. Tujuan utama dari proses ini adalah mengurangi dampak lingkungan, menghemat sumber daya alam, dan mengurangi limbah yang dikirim ke tempat pembuangan akhir. </p>
+                    <div className="isi-video">
+                        <video src={recyclevid} autoPlay muted loop className="video-bg"/>
+                        <div className="text-video">
+                            <h1> Recycle </h1>
+                            <h2> Lihat dan terapkan bagaimana proses recycle bahan plastik dilakukan. Lalu mulailah langkahmu untuk mengelola sampah plastik menjadi lebih berguna</h2>
+                            <a className="btn-selengkapnya" href=''> Selengkapnya &rarr;</a>
+                        </div>
                     </div>
                 </div>
                 <div className="judul-card">
@@ -90,6 +182,23 @@ function Home() {
                         </div>
                     </div>
 
+                </div>
+
+                <div className="partnership">
+                    <div className="title-partnership">
+                        <h1>Partnership</h1>
+                    </div>
+
+                    <div className="isi-partnership">
+                        <div className="logo-partnership">
+                            <img src={imgPartnership} alt="" />
+                        </div>
+                        <div className="detail-partnership">
+                            <h1> Kampus Merdeka Studi Independen </h1>
+                            <h2> PT.Impactbyte Teknologi Edukasi </h2>
+                            <h2> Front End Website Developer </h2>
+                        </div>
+                    </div>
                 </div>
                 
             </div>
