@@ -5,10 +5,12 @@ import Loading from "../../components/loadingbox/loading"
 const Home = () => {
     const { data: artikel, isLoading: isLoadingArtikel, isError: isErrorArtikel, error: errorArtikel } = useGetArtikelByIdQuery(1)
 
-    if (isLoadingArtikel) return <Loading msg={"Loading data artikel...."} />
-    if (isErrorArtikel) return <h1>{errorArtikel.message}</h1>
+    const { data: artikels, isLoading: isLoadingArtikels, isError: isErrorArtikels, error: errorArtikels } = useGetAllArtikelQuery()
 
-    return <HomeView artikel={artikel} isLoading={isLoadingArtikel} isError={isErrorArtikel} error={errorArtikel} />
+    if (isLoadingArtikel) return <Loading msg={"Loading data artikel...."} />
+    if (isErrorArtikel) return <h1>{errorArtikel.message || errorArtikels.message}</h1>
+
+    return <HomeView artikel={artikel} artikels={artikels} isLoading={isLoadingArtikels} isError={isErrorArtikels} error={errorArtikels} />
 }
 
 export default Home
