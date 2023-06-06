@@ -1,0 +1,11 @@
+.loading-container {
+    @apply px-6 py-32 md:px-24 lg:px-48
+}
+
+.loading-box {
+    @apply bg-blue-500 bg-opacity-25 px-4 py-2 mx-auto rounded-md
+}
+
+.loading-title {
+    @apply text-blue-500 font-medium text-lg md:text-xl
+}
