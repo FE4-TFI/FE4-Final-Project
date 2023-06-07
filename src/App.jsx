@@ -4,7 +4,7 @@ import Edukasi from "./pages/Edukasi"
 import Lapor from "./pages/Lapor"
 import NotFound from "./pages/NotFound"
 import logo from "./assets/Logo.png"
-import Login from "./Login"
+// import Login from "./Login"
 
 
 
@@ -22,7 +22,7 @@ function App() {
           </div>
           <ul>
             <li>
-              <Link className="linknav" to="/Home"> Home </Link>
+              <Link className="linknav" to="/"> Home </Link>
             </li>
 
             <li>
@@ -37,12 +37,12 @@ function App() {
             </li> */}
           </ul>
         </nav>
-       
+
       </div>
 
 
       <Routes>
-        <Route exact path="/Home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/Edukasi" element={<Edukasi />} />
         <Route path="/Lapor" element={<Lapor />} />
         {/* <Route path="/Login" element={<Login />} /> */}
