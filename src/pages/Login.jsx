@@ -43,7 +43,7 @@ const LoginForm = () => {
             setLoading(false);
             setUsername("");
             setPassword("");
-            navigate("/home"); // Navigate to home page after successful login
+            navigate("/"); // Navigate to home page after successful login
         } catch (error) {
             setLoading(false);
             setErrorMessage(error.message || "Login failed. Please try again.");
