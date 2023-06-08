@@ -51,7 +51,7 @@ const LoginForm = () => {
     };
 
     return (
-        <div>
+        <div className="container">
             <h2>Login</h2>
             {errorMessage && <p>{errorMessage}</p>}
             <form className="form-group custom-form">

@@ -71,7 +71,7 @@ const RegisterForm = () => {
     };
 
     return (
-        <div>
+        <div className="container">
             <h2>DAFTAR</h2>
             {successMessage && <p>{successMessage}</p>}
             {errorMessage && <p>{errorMessage}</p>}
