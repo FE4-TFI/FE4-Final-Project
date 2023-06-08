@@ -1,6 +1,8 @@
-import { useState } from "react"
+import { useState } from "react";
 import { useDispatch } from 'react-redux';
 import { laporUser } from '../redux/laporReducer';
+import axios from "axios";
+import * as filestack from 'filestack-js';
 
 function Lapor() {
     const dispatch = useDispatch();
@@ -10,19 +12,17 @@ function Lapor() {
     const [lokasi, setLokasi] = useState("");
     const [jenis, setJenis] = useState("");
     const [deskripsi, setDeskripsi] = useState("");
-    const [bukti, setBukti] = useState("");
+    const [uploadedImageUrl, setUploadedImageUrl] = useState(""); // State untuk menyimpan URL gambar yang diunggah
     const [loading, setLoading] = useState(false);
-    const [successMessage, setSuccessMessage] = useState("");
-    const [errorMessage, setErrorMessage] = useState("");
     const [formError, setFormError] = useState(false); // State untuk menandai adanya error form
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
         // Validasi form wajib diisi
-        if (!username || !nohp || !email || !lokasi || !jenis || !deskripsi || !bukti) {
+        if (!username || !nohp || !email || !lokasi || !jenis || !deskripsi || !uploadedImageUrl) {
             setFormError(true);
-            return; // Jika ada input yang kosong, hentikan pengiriman laporan
+            return;
         }
 
         // Buat objek data laporan
@@ -33,7 +33,7 @@ function Lapor() {
             lokasi,
             jenis,
             deskripsi,
-            bukti,
+            bukti: uploadedImageUrl,
         };
 
         // Dispatch action laporUser dengan data laporan
@@ -47,17 +47,32 @@ function Lapor() {
                 setLokasi("");
                 setJenis("");
                 setDeskripsi("");
-                setBukti("");
-                setSuccessMessage("Laporan berhasil dikirim");
-                setErrorMessage("");
+                setUploadedImageUrl("");
+                alert("Laporan Berhasil Dibuat")
                 setFormError(false);
+                e.target.reset();
             })
             .catch((error) => {
                 // Proses gagal, set pesan error
-                setSuccessMessage("");
-                setErrorMessage("Gagal mengirim laporan");
+                alert("Laporan Gagal Dibuat")
                 setFormError(false);
             });
+    };
+
+    const handleFileUpload = (event) => {
+        // Inisialisasi FileStack client
+        const client = filestack.init('AYbGpIzmlTuGzPFIC3t7oz');
+
+        // Konfigurasi FileStack picker
+        const options = {
+            onUploadDone: (result) => {
+                const imageUrl = result.filesUploaded[0].url;
+                setUploadedImageUrl(imageUrl);
+            },
+        };
+
+        // Buka FileStack picker untuk memilih gambar
+        client.picker(options).open();
     };
 
     return (
@@ -94,30 +109,33 @@ function Lapor() {
                     <label>Jenis Kejadian</label>
                     <select className="form-select" value={jenis} onChange={(e) => setJenis(e.target.value)}>
                         <option value="">Pilih jenis kejadian</option>
-                        <option value="1">Membuang sampah plastik sembarangan</option>
-                        <option value="2">Membakar limbah plastik sembarangan</option>
-                        <option value="3">Oplos beras plastik</option>
+                        <option value="Membuang sampah plastik sembarangan">Membuang sampah plastik sembarangan</option>
+                        <option value="Membakar limbah plastik sembarangan">Membakar limbah plastik sembarangan</option>
+                        <option value="Oplos beras plastik">Oplos beras plastik</option>
                     </select>
                     {formError && !jenis && <div className="alert alert-danger">Jenis Kejadian wajib dipilih</div>}
                 </div>
 
-
                 <div>
                     <label>Deskripsi Kejadian</label>
-                    <div className="form-floating">
-                        <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea" value={deskripsi} onChange={(e) => setDeskripsi(e.target.value)}></textarea>
+                    <div className="input-group">
+                        <textarea className="form-control" id="floatingTextarea" value={deskripsi} onChange={(e) => setDeskripsi(e.target.value)}></textarea>
                     </div>
                     {formError && !deskripsi && <div className="alert alert-danger">Deskripsi Kejadian wajib diisi</div>}
                 </div>
 
                 <div className="mb-3">
                     <label className="form-label">Upload Bukti Foto</label>
-                    <input className="form-control form-control-sm" id="formFileSm" type="file" value={bukti} onChange={(e) => setBukti(e.target.value)} />
-                    {formError && !bukti && <div className="alert alert-danger">Bukti Foto wajib diupload</div>}
+                    <input className="form-control form-control-sm" id="formFileSm" type="file" onChange={handleFileUpload} />
+                    {formError && !uploadedImageUrl && <div className="alert alert-danger">Bukti Foto wajib diupload</div>}
                 </div>
 
                 <div className="container">
-                    <button className="btn btn-success" type="submit">KIRIM</button>
+                    <button className="btn btn-success"
+                        type="submit"
+                        disabled={loading}>
+                        {loading ? "Mengirim..." : "Kirim"}
+                    </button>
                 </div>
             </form>
         </div>
