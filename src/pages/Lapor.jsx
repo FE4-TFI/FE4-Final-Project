@@ -76,9 +76,11 @@ function Lapor() {
     };
 
     return (
-        <div className="container">
-            <h2> Buat Laporan Baru </h2>
-            <h5> Silahkan isi data berikut </h5>
+        <div className="container bg-light border-light-subtle rounded mt-5">
+            <div className="py-2">
+                <h2 className="text-center mt-5" > Buat Laporan Baru </h2>
+                <h5 className="text-center" > Silahkan isi data berikut </h5>
+            </div>
 
             <form className="form-group custom-form" onSubmit={handleSubmit}>
                 <div>
@@ -130,8 +132,8 @@ function Lapor() {
                     {formError && !uploadedImageUrl && <div className="alert alert-danger">Bukti Foto wajib diupload</div>}
                 </div>
 
-                <div className="container">
-                    <button className="btn btn-success"
+                <div className="container d-grid gap-2">
+                    <button className="btn btn-success btn-primary"
                         type="submit"
                         disabled={loading}>
                         {loading ? "Mengirim..." : "Kirim"}
@@ -139,6 +141,8 @@ function Lapor() {
                 </div>
             </form>
         </div>
+
+
     );
 }
 

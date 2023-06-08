@@ -51,9 +51,11 @@ const LoginForm = () => {
     };
 
     return (
-        <div className="container">
-            <h2>Login</h2>
-            {errorMessage && <p>{errorMessage}</p>}
+        <div className="container bg-light border-light-subtle rounded mt-5">
+            <div className="py-2">
+                <h2 className="text-center mt-2">Login</h2>
+                {errorMessage && <p className="text-center mt-1">{errorMessage}</p>}
+            </div>
             <form className="form-group custom-form">
                 <div>
                     <label>Username:</label>
@@ -73,14 +75,17 @@ const LoginForm = () => {
                     />
                 </div>
 
-                <button
-                    className="btn btn-success"
-                    type="button"
-                    onClick={handleLogin}
-                    disabled={loading}
-                >
-                    {loading ? "Logging in..." : "Login"}
-                </button>
+                <div className="container d-grid gap-2 pt-2 ">
+                    <button
+                        className="btn btn-success btn-primary mb-5"
+                        type="button"
+                        onClick={handleLogin}
+                        disabled={loading}
+                    >
+                        {loading ? "Logging in..." : "Login"}
+                    </button>
+                </div>
+
             </form>
         </div>
     );

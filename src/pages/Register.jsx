@@ -71,10 +71,12 @@ const RegisterForm = () => {
     };
 
     return (
-        <div className="container">
-            <h2>DAFTAR</h2>
-            {successMessage && <p>{successMessage}</p>}
-            {errorMessage && <p>{errorMessage}</p>}
+        <div className="container bg-light border-light-subtle rounded mt-5">
+            <div className="py-2">
+                <h2 className="text-center mt-2">DAFTAR</h2>
+                {successMessage && <p className="text-center mt-1">{successMessage}</p>}
+                {errorMessage && <p className="text-center mt-1">{errorMessage}</p>}
+            </div>
             <form className="form-group custom-form">
                 <div>
                     <label>Username</label>
@@ -88,7 +90,7 @@ const RegisterForm = () => {
                     <label>Password</label>
                     <input className="form-control" placeholder="Masukkan Password" type="password" value={password} onChange={handlePasswordChange} />
                 </div>
-                <button className="btn btn-success" type="button" onClick={handleRegister} disabled={loading}>
+                <button className="btn btn-success btn-primary mb-5" type="button" onClick={handleRegister} disabled={loading}>
                     {loading ? "Mendaftarkan Akun..." : "Daftar"}
                 </button>
             </form>
