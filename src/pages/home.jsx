@@ -19,10 +19,13 @@ import keepOcean from '../assets/keepocean.png'
 import lovePlanet from '../assets/loveplanet.png'
 import noBottle from '../assets/nobottle.png'
 import bringCup from '../assets/bringcup.png'
+import { useNavigate } from 'react-router-dom'
 // End All Import
 
 
 function Home() {
+    const navigate = useNavigate()
+
     return (
         <>
             <div className="allhome">
@@ -40,6 +43,8 @@ function Home() {
                     </div>
 
                 </div>
+
+                <marquee>Ayo bersama kurangi sampah plastik || Ayo pakai masker || Gunakan plastik secukupnya || Buang sampah pada tempatnya || Coba daur ulang plastik</marquee>
 
                 <div className="tujuan-savi">
                     <div className="title-tujuan">
@@ -125,7 +130,7 @@ function Home() {
                         <div className="text-video">
                             <h1> Reuse </h1>
                             <h2> Lihat bagaimana barang tidak terpakai diolah kembali menjadi layak pakai dan mulailah mencobanya</h2>
-                            <a className="btn-selengkapnya" href=''> Selengkapnya &rarr;</a>
+                            <a className="btn-selengkapnya" onClick={() => navigate("/artikel/1")}> Selengkapnya &rarr;</a>
                         </div>
                     </div>
 

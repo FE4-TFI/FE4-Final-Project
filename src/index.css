@@ -14,6 +14,7 @@ body{
     color: white;
     align-items: center;
     justify-content: center;
+    z-index: 100;
 }
 .navbar > nav{
     height: 80px;
@@ -23,6 +24,7 @@ body{
     align-items: center;
     justify-self: center;
     flex-direction: row;
+    
 }
 .navbar > nav > ul{
     height: 100%;
@@ -50,6 +52,12 @@ body{
     color: #003366;
     font-family: Arial;
     font-weight: 600;
+    padding: 10px;
+}
+.linknav:hover{
+    background-color: #003366;
+    opacity: 0.8;
+    color: white;
 }
 .logo{
     display: flex;
@@ -65,16 +73,19 @@ body{
 .brand{
     display: flex;
     flex-direction: row;
-    width: 350px;
-    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+    justify-content: flex-start;
     align-items: center;
     margin-left: 10px;
+    background-color: transparent;
 }
 .brand > h1{
     font-family: Arial;
     font-style:italic;
     font-weight: lighter;
     color: #003366;
+    width: fit-content;
 }
 
 /* Home */
@@ -96,7 +107,9 @@ body{
     width: 500px;
 }
 .img-banner > img{
-    animation: animate 3s linear infinite;
+    
+    animation: spin 25s infinite linear;
+    
 }
 @keyframes animate{
     0%{
@@ -109,6 +122,14 @@ body{
         transform: translate(-11px, 0);
     }
 }
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 .btn-showmore{
     background-color: #003366;
     margin-top: 10px;
@@ -136,7 +157,8 @@ body{
     flex-direction: column;
     align-items:flex-start;
     justify-content: center;
-    margin-left: 200px;
+    padding-left: 50px;
+    
 }
 .text-banner > h1{
     font-family: Arial, Helvetica, sans-serif;
@@ -144,6 +166,7 @@ body{
     font-size: 4em;
     text-transform: capitalize;
     color: #003366;
+    animation: animate 3s linear infinite;
     
 }
 .text-banner > p{
@@ -153,9 +176,21 @@ body{
     color: black;
     margin-top: 25px;
 }
+
+marquee{
+    background-color: #003366;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: large;
+    text-transform: uppercase;
+}
 /* Tujuan Savi */
 .tujuan-savi{
-    background-image: linear-gradient(to bottom, white, #EAF8FF);
+    background-image: linear-gradient(to bottom, whiten, #EAF8FF);
     width: 100%;
     height: 100%;
     max-height: 500px;
@@ -163,7 +198,6 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: 100px;
 }
 .title-tujuan{
     width: fit-content;
@@ -391,7 +425,7 @@ video{
 }
 .cardhome{
     background-image: linear-gradient(#EAF8FF, #F5F6FF);
-    width: 100vw;
+    
     height: 500px;
     display: flex;
     flex-direction: row;

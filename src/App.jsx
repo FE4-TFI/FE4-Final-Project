@@ -32,13 +32,19 @@ function App() {
             </li>
           </ul>
         </nav>
+        
       </div>
+
+      
+
+      
 
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Edukasi" element={<Edukasi />} />
         <Route path="/Lapor" element={<Lapor />} />
+        <Route path="/artikel/:id" element={<artikel />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 
