@@ -2,6 +2,7 @@ import { Link, Route, Routes } from "react-router-dom"
 import Home from "./pages/home"
 import Edukasi from "./pages/Edukasi"
 import Lapor from "./pages/Lapor"
+import Register from "./pages/Register"
 import NotFound from "./pages/NotFound"
 import logo from "./assets/Logo.png"
 
@@ -30,6 +31,10 @@ function App() {
             <li>
               <Link className="linknav" to="/Lapor"> Lapor </Link>
             </li>
+
+            <li>
+              <Link className="linknav" to="/Register"> Register </Link>
+            </li>
           </ul>
         </nav>
         
@@ -44,6 +49,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Edukasi" element={<Edukasi />} />
         <Route path="/Lapor" element={<Lapor />} />
+        <Route path="/Register" element={<Register />} />
         <Route path="/artikel/:id" element={<artikel />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

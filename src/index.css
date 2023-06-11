@@ -539,3 +539,65 @@ video{
     margin-bottom: 10px;
     font-size: 1em;
 }
+
+
+/* EDUKASI */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(#EAF8FF, #F5F6FF);
+  }
+  
+  #header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    height: 500px;
+    text-align: center;
+  }
+  
+  #container {
+    margin: 20px auto;
+    width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+  
+  .section {
+    margin-bottom: 30px;
+  }
+  
+  .section-heading {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .section-content {
+    margin-left: 20px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 10px;
+  }
