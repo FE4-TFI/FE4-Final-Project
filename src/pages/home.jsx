@@ -32,8 +32,7 @@ function Home() {
                 <div className="first-banner">
                     
                     <div className="text-banner">
-                        <h1> Jadilah anak muda</h1>
-                        <h1> yang cinta Lingkungan </h1>
+                        <h1> Jadilah anak muda yang cinta Lingkungan</h1>
                         <p> Ayo bersama kurangi sampah demi kesehatan lingkungan yang lebih baik</p>
                         <a className="btn-showmore" href=''> Show More </a>
                     </div>

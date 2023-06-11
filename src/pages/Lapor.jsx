@@ -1,8 +1,14 @@
+import ListLapor from "../component/ListLapor"
+
 function Lapor(){
     return(
         <>
-            <h1>ini page lapor</h1>
+            <ListLapor />
+            
+            
+            
         </>
+        
     )
 }
 
