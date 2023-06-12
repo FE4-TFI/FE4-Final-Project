@@ -20,6 +20,7 @@ import lovePlanet from '../assets/loveplanet.png'
 import noBottle from '../assets/nobottle.png'
 import bringCup from '../assets/bringcup.png'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 // End All Import
 
 
@@ -123,13 +124,15 @@ function Home() {
                         
                     </div>
                 </div>
+
                 <div className="videobanner">
                     <div className="isi-video">
                         <video src={reusevid} autoPlay muted loop className="video-bg"/>
                         <div className="text-video">
                             <h1> Reuse </h1>
                             <h2> Lihat bagaimana barang tidak terpakai diolah kembali menjadi layak pakai dan mulailah mencobanya</h2>
-                            <a className="btn-selengkapnya" onClick={() => navigate("/artikel/1")}> Selengkapnya &rarr;</a>
+                            <a className="btn-selengkapnya" onClick={() => navigate("/artikel/reuse")}> Selengkapnya &rarr;</a>
+                            {/* <a className='btn-selengkapnya'>Selengkapnya &rarr; </a> */}
                         </div>
                     </div>
 
@@ -138,7 +141,8 @@ function Home() {
                         <div className="text-video">
                             <h1> Reduce </h1>
                             <h2> Ayo berganti menggunakan bahan non-plastik dalam kehidupan sehari-hari</h2>
-                            <a className="btn-selengkapnya" href=''> Selengkapnya &rarr;</a>
+                            {/* <a className='btn-selengkapnya'>Selengkapnya &rarr; </a> */}
+                            <a className="btn-selengkapnya" onClick={() => navigate("/artikel/reduce")}> Selengkapnya &rarr;</a>
                         </div>
                     </div>
 
@@ -147,10 +151,13 @@ function Home() {
                         <div className="text-video">
                             <h1> Recycle </h1>
                             <h2> Lihat dan terapkan bagaimana proses recycle bahan plastik dilakukan. Lalu mulailah langkahmu untuk mengelola sampah plastik menjadi lebih berguna</h2>
-                            <a className="btn-selengkapnya" href=''> Selengkapnya &rarr;</a>
+                            {/* <a className='btn-selengkapnya'>Selengkapnya &rarr; </a> */}
+                            {/* <a className="btn-selengkapnya" onClick={() => navigate("/artikel/recycle")}> Selengkapnya &rarr;</a> */}
+                            <Link className="btn-selengkapnya" to="/artikel/recycle"> Selengkapnya &rarr; </Link>
                         </div>
                     </div>
                 </div>
+
                 <div className="judul-card">
                     <h1> ACARA </h1>
                 </div>

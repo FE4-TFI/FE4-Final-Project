@@ -1,10 +1,11 @@
-import { Link, Route, Routes } from "react-router-dom"
+import { NavLink, Route, Routes } from "react-router-dom"
 import Home from "../pages/home"
 import Edukasi from "../pages/Edukasi"
 import Lapor from "../pages/Lapor"
 import Register from "../pages/Register"
 import NotFound from "../pages/NotFound"
 import logo from "../assets/Logo.png"
+import Login from "../pages/Login"
 function Navbar(){
     return(
         <>
@@ -19,19 +20,19 @@ function Navbar(){
                 </div>
                 <ul>
                     <li>
-                    <Link className="linknav" to="/"> Home </Link>
+                    <NavLink className="linknav" to="/"> Home </NavLink>
                     </li>
 
                     <li>
-                    <Link className="linknav" to="/Edukasi"> Edukasi </Link>
+                    <NavLink className="linknav" to="/Edukasi"> Edukasi </NavLink>
                     </li>
 
                     <li>
-                    <Link className="linknav" to="/Lapor"> Lapor </Link>
+                    <NavLink className="linknav" to="/Lapor"> Lapor </NavLink>
                     </li>
 
                     <li>
-                    <Link className="linknav" to="/Register"> Register </Link>
+                    <NavLink className="linknav" to="/Login"> Login </NavLink>
                     </li>
                 </ul>
             </nav>
@@ -41,8 +42,11 @@ function Navbar(){
         <Route path="/" element={<Home />} />
         <Route path="/Edukasi" element={<Edukasi />} />
         <Route path="/Lapor" element={<Lapor />} />
+        <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
-        <Route path="/artikel/:id" element={<artikel />} />
+        {/* <Route path="/artikel" element={<artikelList />} /> */}
+        <Route path="/artikel:title" element={<artikel/>} />
+        {/* <Route path="/artikel/:title" element={<artikel />} /> */}
         <Route path="*" element={<NotFound />} />
       </Routes>
 
