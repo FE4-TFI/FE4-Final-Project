@@ -6,6 +6,7 @@ import Register from "../pages/Register"
 import NotFound from "../pages/NotFound"
 import logo from "../assets/Logo.png"
 import Login from "../pages/Login"
+
 function Navbar(){
     return(
         <>
