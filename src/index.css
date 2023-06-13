@@ -698,15 +698,6 @@ video{
 }
 
 
-/* Artikel */
-.artikel{
-    margin-top: 80px;
-    width: 100%;
-    height: 500px;
-    background-color: red;
-}
-
-
 /* Footer */
 .container-footer{
     background-image: linear-gradient(#EAF8FF, #F5F6FF);
@@ -746,4 +737,27 @@ video{
     font-family: Arial;
     font-style:italic;
     font-weight: lighter;
+}
+
+/* EDUKASI */
+.container-edukasi{
+    background-color: red;
+    height: 500px;
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* Detail Edukasi */
+.Container-Detail-Edukasi{
+    
+    width: 100%;
+    height: fit-content;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

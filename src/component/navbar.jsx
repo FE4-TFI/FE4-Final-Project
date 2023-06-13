@@ -1,5 +1,6 @@
 import { NavLink, Route, Routes } from "react-router-dom"
 import Home from "../pages/home"
+import ListEdukasi from "../pages/ListEdukasi"
 import Edukasi from "../pages/Edukasi"
 import Lapor from "../pages/Lapor"
 import Register from "../pages/Register"
@@ -41,13 +42,13 @@ function Navbar(){
 
         <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Edukasi" element={<Edukasi />} />
+        <Route path="/Edukasi" element={<ListEdukasi />} />
         <Route path="/Lapor" element={<Lapor />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
-        {/* <Route path="/artikel" element={<artikelList />} /> */}
-        <Route path="/artikel:title" element={<artikel/>} />
-        {/* <Route path="/artikel/:title" element={<artikel />} /> */}
+
+        <Route path="/Edukasi" element={<ListEdukasi />} />
+        <Route path="/Edukasi/:title" element={<Edukasi/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 

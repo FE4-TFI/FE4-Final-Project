@@ -131,7 +131,7 @@ function Home() {
                         <div className="text-video">
                             <h1> Reuse </h1>
                             <h2> Lihat bagaimana barang tidak terpakai diolah kembali menjadi layak pakai dan mulailah mencobanya</h2>
-                            <a className="btn-selengkapnya" onClick={() => navigate("/artikel/reuse")}> Selengkapnya &rarr;</a>
+                            <a className="btn-selengkapnya" onClick={() => navigate("/Edukasi/reuse")}> Selengkapnya &rarr;</a>
                             {/* <a className='btn-selengkapnya'>Selengkapnya &rarr; </a> */}
                         </div>
                     </div>
@@ -142,7 +142,7 @@ function Home() {
                             <h1> Reduce </h1>
                             <h2> Ayo berganti menggunakan bahan non-plastik dalam kehidupan sehari-hari</h2>
                             {/* <a className='btn-selengkapnya'>Selengkapnya &rarr; </a> */}
-                            <a className="btn-selengkapnya" onClick={() => navigate("/artikel/reduce")}> Selengkapnya &rarr;</a>
+                            <a className="btn-selengkapnya" onClick={() => navigate("/Edukasi/reduce")}> Selengkapnya &rarr;</a>
                         </div>
                     </div>
 
@@ -153,7 +153,7 @@ function Home() {
                             <h2> Lihat dan terapkan bagaimana proses recycle bahan plastik dilakukan. Lalu mulailah langkahmu untuk mengelola sampah plastik menjadi lebih berguna</h2>
                             {/* <a className='btn-selengkapnya'>Selengkapnya &rarr; </a> */}
                             {/* <a className="btn-selengkapnya" onClick={() => navigate("/artikel/recycle")}> Selengkapnya &rarr;</a> */}
-                            <Link className="btn-selengkapnya" to="/artikel/recycle"> Selengkapnya &rarr; </Link>
+                            <Link className="btn-selengkapnya" to="/Edukasi/recycle"> Selengkapnya &rarr; </Link>
                         </div>
                     </div>
                 </div>
