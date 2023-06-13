@@ -6,6 +6,8 @@ import Register from "../pages/Register"
 import NotFound from "../pages/NotFound"
 import logo from "../assets/Logo.png"
 import Login from "../pages/Login"
+import Artikel from "../pages/artikel"
+import ArtikelList from "../pages/artikelList"
 
 function Navbar(){
     return(
@@ -17,7 +19,7 @@ function Navbar(){
                     <img src={logo} alt="inilogo" />
                 </div>
                 <div className="brand">
-                    <h1>Save Environment</h1>
+                    <h1 className="fs-4">Save Environment</h1>
                 </div>
                 <ul>
                     <li>
@@ -45,9 +47,7 @@ function Navbar(){
         <Route path="/Lapor" element={<Lapor />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
-        {/* <Route path="/artikel" element={<artikelList />} /> */}
-        <Route path="/artikel:title" element={<artikel/>} />
-        {/* <Route path="/artikel/:title" element={<artikel />} /> */}
+        <Route path="/artikel" element={<ArtikelList />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 

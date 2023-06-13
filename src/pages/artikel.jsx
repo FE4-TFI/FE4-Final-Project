@@ -1,12 +1,6 @@
-function artikel (){
+function Artikel (){
     return(
-        <>
-        
-        <div className="artikel">
-            <h1>Artikel Item</h1>
-        </div>
-
-        </>
+        <h1>yyyy</h1>
     );
 }
-export default artikel
+export default Artikel
