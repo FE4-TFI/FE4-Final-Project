@@ -20,6 +20,10 @@
     margin-bottom: 18px;
 }
 
+.list-img {
+    width: 240px;
+}
+
 .btn-primary {
     background-color: rgb(39, 87, 177);
     border: none;
@@ -28,4 +32,33 @@
     padding: 8px 18px;
     font-size: 18px;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .list-box {
+        flex-direction: column;
+        gap: 6rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .list-container {
+        padding: 0 28px;
+    }
+
+    .list-box {
+        gap: 3rem;
+    }
+
+    .list-title {
+        font-size: 32px;
+    }
+
+    .list-text {
+        font-size: 16px;
+    }
+
+    .list-img {
+        width: 144px;
+    }
 }
