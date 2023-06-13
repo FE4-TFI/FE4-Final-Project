@@ -17,12 +17,13 @@ import {
 import logger from "redux-logger";
 import laporReducer from "./laporReducer";
 import authReducer from "./authSlice";
-import edukasiSlice from "./edukasiSlice";
+import "./edukasiReducer";
+import edukasiReducer from "./edukasiReducer";
 
 const rootReducer = combineReducers({
   lapor: laporReducer,
   auth: authReducer,
-  edukasi: edukasiSlice,
+  edukasi: edukasiReducer,
 });
 
 const middleware = [...getDefaultMiddleware(), logger];

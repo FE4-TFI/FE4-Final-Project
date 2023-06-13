@@ -1,16 +1,16 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const eduUrl = "";
+const eduUrl = "https://64507b91a3221969114b394b.mockapi.io/Artikel";
 
 export const eduArtikel = createAsyncThunk(
-  "auth/eduArtikel",
+  "edukasi/eduArtikel",
   async (eduData, { rejectWithValue }) => {
     try {
       const response = await axios.get(eduUrl, eduData);
       return response.data;
     } catch (error) {
-      return rejectWithValue(error.data);
+      return rejectWithValue(error.response.data);
     }
   }
 );
@@ -18,11 +18,12 @@ export const eduArtikel = createAsyncThunk(
 const eduSlice = createSlice({
   name: "edukasi",
   initialState: {
-    loading: faSearch,
+    loading: false,
     error: null,
     success: false,
+    data: [],
   },
-  reducers: [],
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(eduArtikel.pending, (state) => {
@@ -30,12 +31,13 @@ const eduSlice = createSlice({
         state.error = null;
         state.success = false;
       })
-      .addCase(eduArtikel.pending, (state) => {
+      .addCase(eduArtikel.fulfilled, (state, action) => {
         state.loading = false;
         state.error = null;
         state.success = true;
+        state.data = action.payload;
       })
-      .addCase(eduArtikel.pending, (state, action) => {
+      .addCase(eduArtikel.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
         state.success = false;
@@ -43,4 +45,4 @@ const eduSlice = createSlice({
   },
 });
 
-export default eduArtikel.reducer;
+export default eduSlice.reducer;

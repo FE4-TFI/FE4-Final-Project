@@ -4,7 +4,9 @@ import Edukasi from "./pages/Edukasi"
 import Lapor from "./pages/Lapor"
 import NotFound from "./pages/NotFound"
 import logo from "./assets/Logo.png"
-// import Login from "./Login"
+import LoginForm from "./pages/Login"
+import RegisterForm from "./pages/Register"
+
 
 
 
@@ -45,7 +47,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Edukasi" element={<Edukasi />} />
         <Route path="/Lapor" element={<Lapor />} />
-        {/* <Route path="/Login" element={<Login />} /> */}
+        <Route path="/LoginForm" element={<LoginForm />} />
+        <Route path="/Register" element={<RegisterForm />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 
