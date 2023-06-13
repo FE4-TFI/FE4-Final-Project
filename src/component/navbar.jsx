@@ -48,6 +48,7 @@ function Navbar(){
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/artikel" element={<ArtikelList />} />
+        <Route path="/artikel/:id" element={<Artikel />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 
