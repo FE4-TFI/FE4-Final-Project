@@ -79,20 +79,20 @@ const RegisterForm = () => {
                         <h1 className="my-5 display-3 fw-bold ls-tight">SAVI<br />
                             <h5 className="text-primary">Save Environment</h5>
                         </h1>
-                        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsum delectus eos reprehenderit suscipit? Accusantium numquam ab, minima, nisi veniam quisquam itaque temporibus doloremque cumque aliquam atque et! Neque, inventore?</p>
+                        <p className="lh-sm">Save Environment menyediakan artikel edukasi yang membuka wawasan anda mengenai penggunaan plastik secara baik dan benar. Anda juga dapat menggunakan fitur lain seperti lapor untuk mengadukan suatu tindakan merugikan yang berhubungan dengan penggunaan plastik</p>
                     </div>
                     <div className="col-lg-6 mb-5 mb-lg-0">
                         <div className="card">
                             <div className="py-2">
                                 <h2 className="text-center mt-2">DAFTAR</h2>
-                                {successMessage && <p className="text-center mt-1">{successMessage}</p>}
-                                {errorMessage && <p className="text-center mt-1">{errorMessage}</p>}
+                                {successMessage && <p className="alert alert-success text-center mt-1">{successMessage}</p>}
+                                {errorMessage && <p className="alert alert-danger text-center mt-1">{errorMessage}</p>}
                             </div>
                             <div className="card-bofy py-5 px-md-5">
                                 <form>
                                     <div className="row">
-                                        <div className="col-md-6 mb-4">
-                                            <div className="form-outline">
+                                        <div >
+                                            <div className="form-outline mb-4">
                                                 <label className="form-label">Username</label>
                                                 <input className="form-control"
                                                     type="text"

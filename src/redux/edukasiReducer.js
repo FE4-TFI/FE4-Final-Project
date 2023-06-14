@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const eduUrl = "https://64507b91a3221969114b394b.mockapi.io/Artikel";
+const eduUrl = "";
 
 export const eduArtikel = createAsyncThunk(
   "edukasi/eduArtikel",

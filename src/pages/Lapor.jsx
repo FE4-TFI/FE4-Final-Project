@@ -4,6 +4,7 @@ import { laporUser } from '../redux/laporReducer';
 import axios from "axios";
 import * as filestack from 'filestack-js';
 import { Carousel } from 'bootstrap';
+import Footer from "./Footer";
 
 function Lapor() {
     // state untuk form
@@ -188,6 +189,8 @@ function Lapor() {
                     </button>
                 </div>
             </div>
+
+            <Footer></Footer>
         </>
 
     );

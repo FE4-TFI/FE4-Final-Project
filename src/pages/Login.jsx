@@ -62,7 +62,7 @@ const LoginForm = () => {
                             <h1 className="my-5 display-3 fw-bold ls-tight">SAVI<br />
                                 <h5 className="text-primary">Save Environment</h5>
                             </h1>
-                            <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsum delectus eos reprehenderit suscipit? Accusantium numquam ab, minima, nisi veniam quisquam itaque temporibus doloremque cumque aliquam atque et! Neque, inventore?</p>
+                            <p className="lh-sm">Save Environment menyediakan artikel edukasi yang membuka wawasan anda mengenai penggunaan plastik secara baik dan benar. Anda juga dapat menggunakan fitur lain seperti lapor untuk mengadukan suatu tindakan merugikan yang berhubungan dengan penggunaan plastik</p>
                         </div>
 
                         <div className="col-lg-6 mb-5 mb-lg-0">
@@ -114,8 +114,8 @@ const LoginForm = () => {
                                         {/* nav to register */}
                                         <div className="text-center">
                                             <p>Belum punya akun ? <Link
-                                                    to="/Register"
-                                                    className="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Register</Link>
+                                                to="/Register"
+                                                className="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Register</Link>
                                             </p>
                                         </div>
                                     </form>
