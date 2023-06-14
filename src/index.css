@@ -65,7 +65,9 @@ body{
     flex-direction: row;
     height: 50px;
     width: 50px;
-    margin-left: 250px;
+    margin-left: 300px;
+    margin-bottom: 15px;
+    background-color: transparent;
 }
 .logo > img{
     width: 100px;
@@ -76,15 +78,19 @@ body{
     flex-direction: row;
     max-width: 100%;
     width: 100%;
+    height: 50px;
     justify-content: flex-start;
     align-items: center;
     margin-left: 10px;
     background-color: transparent;
+    margin-bottom: 15px;
 }
 .brand > h1{
     font-family: Arial;
     font-style:italic;
     font-weight: lighter;
+    font-size: 2em;
+    padding-top: 10px;
     color: #003366;
     width: fit-content;
 }
@@ -193,11 +199,12 @@ marquee{
     background-image: linear-gradient(to bottom, whiten, #EAF8FF);
     width: 100%;
     height: 100%;
-    max-height: 500px;
+    max-height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 .title-tujuan{
     width: fit-content;
@@ -234,8 +241,8 @@ marquee{
     align-items: center;
     justify-content: center;
     background-color: white;
-    height: 200px;
-    width: 200px;
+    height: 400px;
+    width: fit-content;
     padding: 50px;
     border-radius: 10px;
 }
@@ -287,7 +294,7 @@ marquee{
     gap: 50px;
     max-width: 1500px;
     height: fit-content;
-    width: 1300px;
+    width: 100%;
     background-image: linear-gradient(#EAF8FF, #F5F6FF);
     border-radius: 30px;
     padding: 30px;
@@ -300,7 +307,7 @@ marquee{
     background-color: transparent;
     padding: 20px;
     height: fit-content;
-    width: 400px;
+    width: 500px;
     gap: 10px;
 }
 .image-desc{
@@ -319,10 +326,15 @@ marquee{
     width: 200px;
     height: 200px;
 }
+.desc{
+    background-color: transparent;
+    width: fit-content;
+
+}
 .desc > h2{
     font-family: Arial, Helvetica, sans-serif;
     text-transform: capitalize;
-    width: 150px;
+    width: 250px;
     
 }
 .desc > p{
@@ -411,7 +423,7 @@ video{
     color: #003366;
     max-width: 740px;
     text-align: justify;
-    margin-top: 20px;
+    
 }
 
     /* CardHome */
@@ -487,6 +499,9 @@ video{
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
+.img-bio:hover{
+    background-color: whitesmoke;
+}
 .img-bio > p{
     max-width: 250px;
     word-spacing: 10px;
@@ -510,6 +525,9 @@ video{
 .title-partnership{
     margin-top: 50px;
     margin-bottom: 20px;
+}
+.title-partnership > marquee{
+    border-radius: 8px;
 }
 .title-partnership > h1{
     font-family: Arial, Helvetica, sans-serif;
@@ -699,7 +717,103 @@ video{
 
 
 /* Footer */
-.container-footer{
+
+.containerl {
+    max-width: 1170px;
+    margin: auto;
+  }
+  
+  .my-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .footerk {
+    background-color: #24262b;
+    padding: 70px 0;
+    margin-top: 30px;
+  }
+  
+  .my-footer-col {
+    width: 25%;
+    padding: 0 15px;
+  }
+  
+  .my-footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  .my-footer-col h4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  
+  .my-footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  
+  .my-footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbb;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  
+  .my-footer-col ul li a:hover {
+    color: #fff;
+    padding-left: 8px;
+  }
+  
+  .my-footer-col .sosial-media a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
+  
+  .my-footer-col .sosial-media a:hover {
+    color: #24262b;
+    background-color: #fff;
+  }
+  
+  @media (max-width: 767px) {
+    .my-footer-col {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-width: 574px) {
+    .my-footer-col {
+      width: 100%;
+    }
+  }
+/* .container-footer{
     background-image: linear-gradient(#EAF8FF, #F5F6FF);
     width: 100%;
     height: fit-content;
@@ -737,7 +851,7 @@ video{
     font-family: Arial;
     font-style:italic;
     font-weight: lighter;
-}
+} */
 
 /* EDUKASI */
 .container-edukasi{

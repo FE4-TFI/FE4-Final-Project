@@ -53,25 +53,25 @@ function Home() {
                     <div className="isi-tujuan">
                         <div className="container-tujuan">
                             <div className="isi-gambar">
-                                <img className="first-image" src={EducationVector} alt="" />
+                                <img className="image-pertama" src={EducationVector} alt="" />
                                 <h1> Mengedukasi </h1>
                                 <p> Memberikan edukasi terkait bahaya sampah plastik dan cara penanggulangannya </p>
                             </div>
 
                             <div className="isi-gambar">
-                                <img className="first-image" src={MembantuVector} alt="" />
+                                <img className="image-pertama" src={MembantuVector} alt="" />
                                 <h1> Membantu</h1>
                                 <p> Memberikan bantuan dalam bentuk digital </p>
                             </div>
 
                             <div className="isi-gambar">
-                                <img className="first-image" src={MengingatkanVector} alt="" />
+                                <img className="image-pertama" src={MengingatkanVector} alt="" />
                                 <h1> Mengingatkan </h1>
                                 <p> Mengingatkan masyarakat untuk tetap peduli akan lingkungan terhadap sampah plastik </p>
                             </div>
 
                             <div className="isi-gambar">
-                                <img className="first-image" src={MerawatVector} alt="" />
+                                <img className="image-pertama" src={MerawatVector} alt="" />
                                 <h1> Merawat </h1>
                                 <p> Merawat lingkungan sekitar dari banyaknya sampah plastik </p>
                             </div>
@@ -167,7 +167,7 @@ function Home() {
                             <img className="first-image" src={imgCard2} alt="" />
                         </div>
                         <div className="img-bio">
-                            <p> Biodiversity is <br /> <br /> the spice of nature </p>
+                            <p> Biodiversity is <br /> the spice of nature </p>
                             <img className="second-image" src={imgSecondCard1} alt="" />
                         </div>
 
@@ -178,7 +178,7 @@ function Home() {
                             <img className="first-image" src={imgCard1} alt="" />
                         </div>
                         <div className="img-bio">
-                            <p> World Environment Day <br /> <br /> reminds us to work for <br /> <br /> the safety of nature </p>
+                            <p> <br /> World Environment Day  <br /> reminds us to work for  <br /> the safety of nature </p>
                             <img className="second-image" src={imgSecondCard2} alt="" />
                         </div>
                     </div>
@@ -188,7 +188,7 @@ function Home() {
                             <img className="first-image" src={imgCard3} alt="" />
                         </div>
                         <div className="img-bio">
-                            <p> Celebrate Biodiversity <br /> <br /> on June 5th & Everyday</p>
+                            <p> Celebrate Biodiversity <br /> on June 5th & Everyday</p>
                             <img className="second-image" src={imgSecondCard3} alt="" />
                         </div>
                     </div>
@@ -197,6 +197,7 @@ function Home() {
 
                 <div className="partnership">
                     <div className="title-partnership">
+                        <marquee> ON GOING </marquee>
                         <h1>Partnership</h1>
                     </div>
 

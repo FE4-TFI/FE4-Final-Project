@@ -10,10 +10,19 @@ function Edukasi (){
 
     useEffect(() => {
         axios("https://64802513f061e6ec4d48a5f4.mockapi.io/indotaste/Edukasi")
-        .then(({data}) => setDetail(data))
-        .catch(err => console.log(err))
-    },[]);
+        .then(({ data }) => {
+            const filteredData = data.filter(
+              article =>
+                article.judul === "reuse" ||
+                article.judul === "reduce" ||
+                article.judul === "recycle"
+            );
+            setDetail(filteredData);
+          })
+          .catch(err => console.log(err));
+      }, []);
     console.log(detail)
+
 
     return(
         <>

@@ -1,5 +1,6 @@
 import ListLapor from "../component/ListLapor"
 
+
 function Lapor(){
     return(
         <>
