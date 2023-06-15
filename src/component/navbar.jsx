@@ -27,7 +27,7 @@ function Navbar(){
                     </li>
 
                     <li>
-                    <NavLink className="linknav" to="/Edukasi"> Edukasi </NavLink>
+                    <NavLink className="linknav" to="/artikel"> Edukasi </NavLink>
                     </li>
 
                     <li>
