@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useGetArtikelByIdQuery } from "../redux/reducer";
+import '../css/main.css';
 
 function Artikel (){
     const { id } = useParams()
@@ -11,7 +12,17 @@ function Artikel (){
 
     return(
         <div className="artikel-container">
-            <img src="" alt="" />
+            <div className="img-box">
+                <img src={`/img_artikel/${data.img}`} alt="" className="artikel-img" />
+            </div>
+            <div className="artikel-content">
+                <h1 className="artikel-heading">{data.title}</h1>
+                <p className="artikel-paragraf">{data.paragraf1}</p>
+                <p className="artikel-paragraf">{data.paragraf2}</p>
+                <p className="artikel-paragraf">{data.paragraf3}</p>
+                <p className="artikel-paragraf">{data.paragraf4}</p>
+                <p className="artikel-paragraf">{data.paragraf5}</p>
+            </div>
         </div>
     );
 }
