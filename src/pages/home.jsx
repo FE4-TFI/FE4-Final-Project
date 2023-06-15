@@ -35,7 +35,7 @@ function Home() {
                     <div className="text-banner">
                         <h1> Jadilah anak muda yang cinta Lingkungan</h1>
                         <p> Ayo bersama kurangi sampah demi kesehatan lingkungan yang lebih baik</p>
-                        <a className="btn-showmore" href=''> Show More </a>
+                        <a className="btn-showmore" href=''> Selengkapnya </a>
                     </div>
 
                     <div className="img-banner">
@@ -45,6 +45,33 @@ function Home() {
                 </div>
 
                 <marquee>Ayo bersama kurangi sampah plastik || Ayo pakai masker || Gunakan plastik secukupnya || Buang sampah pada tempatnya || Coba daur ulang plastik</marquee>
+
+                <div className="all-grid">
+                    <h1>Artikel</h1>
+                    <div className="container-grid">
+                        <div className="grid-item item1" onClick={() => navigate("/Menumpuk")}>
+                            <h1>Menumpuk</h1>
+                        </div>
+                        <div className="grid-item item2" onClick={() => navigate("/Membantu")}>
+                            <h1>Membantu</h1>
+                        </div>
+                        <div className="grid-item item3" >
+                            <h3></h3>
+                        </div>
+                        <div className="grid-item item4" onClick={() => navigate("/GotongRoyong")}>
+                            <h1>Gotong Royong</h1>
+                        </div>
+                        <div className="grid-item item5" onClick={() => navigate("/Perusakan")}>
+                            <h1>Perusakan</h1>
+                        </div>
+                        <div className="grid-item item6" onClick={() => navigate("/Efektif")}>
+                            <h1>Efektif</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <marquee>Ayo bersama kurangi sampah plastik || Ayo pakai masker || Gunakan plastik secukupnya || Buang sampah pada tempatnya || Coba daur ulang plastik</marquee>
+
 
                 <div className="tujuan-savi">
                     <div className="title-tujuan">
@@ -131,7 +158,7 @@ function Home() {
                         <div className="text-video">
                             <h1> Reuse </h1>
                             <h2> Lihat bagaimana barang tidak terpakai diolah kembali menjadi layak pakai dan mulailah mencobanya</h2>
-                            <a className="btn-selengkapnya" onClick={() => navigate("/Edukasi/reuse")}> Selengkapnya &rarr;</a>
+                            <a className="btn-selengkapnya" onClick={() => navigate("/Reuse")}> Selengkapnya &rarr;</a>
                             {/* <a className='btn-selengkapnya'>Selengkapnya &rarr; </a> */}
                         </div>
                     </div>
@@ -142,7 +169,7 @@ function Home() {
                             <h1> Reduce </h1>
                             <h2> Ayo berganti menggunakan bahan non-plastik dalam kehidupan sehari-hari</h2>
                             {/* <a className='btn-selengkapnya'>Selengkapnya &rarr; </a> */}
-                            <a className="btn-selengkapnya" onClick={() => navigate("/Edukasi/reduce")}> Selengkapnya &rarr;</a>
+                            <a className="btn-selengkapnya" onClick={() => navigate("/Reduce")}> Selengkapnya &rarr;</a>
                         </div>
                     </div>
 
@@ -151,9 +178,7 @@ function Home() {
                         <div className="text-video">
                             <h1> Recycle </h1>
                             <h2> Lihat dan terapkan bagaimana proses recycle bahan plastik dilakukan. Lalu mulailah langkahmu untuk mengelola sampah plastik menjadi lebih berguna</h2>
-                            {/* <a className='btn-selengkapnya'>Selengkapnya &rarr; </a> */}
-                            {/* <a className="btn-selengkapnya" onClick={() => navigate("/artikel/recycle")}> Selengkapnya &rarr;</a> */}
-                            <Link className="btn-selengkapnya" to="/Edukasi/recycle"> Selengkapnya &rarr; </Link>
+                            <a className="btn-selengkapnya" onClick={() => navigate("/Recycle")}> Selengkapnya &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -195,13 +220,30 @@ function Home() {
 
                 </div>
 
+                 {/* About */}
+                <div className="about-section">
+                <section className="about" id="about">
+                    <div className="about-img">
+                        <img src={imgSecondCard3} alt=""/>
+                    </div>
+                    <div className="about-text">
+                        <h2>Ayo Bersama Rawat Kembali Dunia Menjadi Lebih Baik</h2>
+                            <p>SAVI bertujuan untuk meningkatkan upaya penghijauan kembali dan perawatan terhadap lingkungan di dunia dimulai dari lingkungan sekitar</p>
+                            <p>Dengan adanya SAVI diharapkan dapat membantu dunia dalam meminimalisir kerusakan yang dapat menimbulkan lebih banyak bencana untuk masa depan yang lebih baik</p>
+                            <a href="#" className="btn-ikut">Ikuti Kami</a>
+
+                    </div>
+                </section>
+                </div>
+
                 <div className="partnership">
                     <div className="title-partnership">
-                        <marquee> ON GOING </marquee>
+                        
                         <h1>Partnership</h1>
                     </div>
 
                     <div className="isi-partnership">
+                    <marquee className="marquee1"> FE - 4 || Kampus Merdeka || Skilvul </marquee>
                         <div className="logo-partnership">
                             <img src={imgPartnership} alt="" />
                         </div>
@@ -210,6 +252,7 @@ function Home() {
                             <h2> PT.Impactbyte Teknologi Edukasi </h2>
                             <h2> Front End Website Developer </h2>
                         </div>
+                    <marquee className="marquee2"> FE - 4 || Kampus Merdeka || Skilvul </marquee>
                     </div>
                 </div>
                 

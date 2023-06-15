@@ -71,7 +71,7 @@ const RegisterForm = () => {
     };
 
     return (
-
+        <div className="register-page">
         <div className="px-4 py-5 px-md-5 text-center text-lg-start" >
             <div className="container">
                 <div className="row gx-lg-5 align-items-center">
@@ -141,6 +141,7 @@ const RegisterForm = () => {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
 
 

@@ -9,13 +9,13 @@ function Edukasi (){
     const [detail, setDetail] = useState([])
 
     useEffect(() => {
-        axios("https://64802513f061e6ec4d48a5f4.mockapi.io/indotaste/Edukasi")
+        axios("https://648aeba217f1536d65e9f714.mockapi.io/Edukasi")
         .then(({ data }) => {
             const filteredData = data.filter(
-              article =>
-                article.judul === "reuse" ||
-                article.judul === "reduce" ||
-                article.judul === "recycle"
+              item =>
+                item.judul === "reuse" ||
+                item.judul === "reduce" ||
+                item.judul === "recycle"
             );
             setDetail(filteredData);
           })
@@ -34,7 +34,7 @@ function Edukasi (){
             {detail.length === 0 ? <span>Loading ...</span> : 
             detail.map((item, index) => (
                 <div className="edukasi-konten" key={index}>
-                    <img src={item.video} width={1000} />
+                    <img src={item.gambar} width={1000} />
                     <h1>{item.judul}</h1>
                     <p>{item.deskripsi}</p>
                 </div>

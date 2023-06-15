@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../redux/authSlice";
 import { useNavigate } from "react-router-dom";
@@ -31,7 +31,7 @@ const LoginForm = () => {
         try {
             // Menggunakan API untuk validasi login
             const response = await axios.get(
-                `https://6451089fe1f6f1bb22a608b7.mockapi.io/users?username=${username}&password=${password}`
+                `https://648aeba217f1536d65e9f714.mockapi.io/user?username=${username}&password=${password}`
             );
             if (response.data.length === 0) {
                 throw new Error("Username atau password tidak valid");
@@ -45,7 +45,7 @@ const LoginForm = () => {
             setLoading(false);
             setUsername("");
             setPassword("");
-            navigate("/"); // Navigate to home page after successful login
+            navigate("/Home"); // Navigate to home page after successful login
         } catch (error) {
             setLoading(false);
             setErrorMessage(error.message || "Login failed. Please try again.");
@@ -55,6 +55,7 @@ const LoginForm = () => {
     return (
 
         <>
+        <div className="login-page">
             <div className="px-4 py-5 px-md-5 text-center text-lg-start" >
                 <div className="container">
                     <div className="row gx-lg-5 align-items-center">
@@ -125,6 +126,7 @@ const LoginForm = () => {
                     </div>
                 </div>
             </div>
+        </div>
         </>
 
     );

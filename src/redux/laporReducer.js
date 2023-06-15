@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const apiUrl = "https://64807719f061e6ec4d495483.mockapi.io/apilapor";
+const apiUrl = "https://648aeba217f1536d65e9f714.mockapi.io/Lapor";
 
 export const laporUser = createAsyncThunk(
   "auth/laporUser",
