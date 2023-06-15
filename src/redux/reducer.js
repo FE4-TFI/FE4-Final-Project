@@ -15,9 +15,12 @@ export const ArtikelApi = createApi({
         // Query mengambil data artikel by id
         getArtikelById: builder.query({
             query: (id) => `articles/${id}`
+        }),
+        getAllVideos: builder.query({
+            query: () => "videos"
         })
     })
 })
 
 // Export helper
-export const { useGetAllArtikelQuery, useGetArtikelByIdQuery } = ArtikelApi
+export const { useGetAllArtikelQuery, useGetArtikelByIdQuery, useGetAllVideosQuery } = ArtikelApi
