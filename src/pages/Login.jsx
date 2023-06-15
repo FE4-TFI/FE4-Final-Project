@@ -62,7 +62,11 @@ const LoginForm = () => {
                             <h1 className="my-5 display-3 fw-bold ls-tight">SAVI<br />
                                 <h5 className="text-primary">Save Environment</h5>
                             </h1>
-                            <p className="lh-sm">Save Environment menyediakan artikel edukasi yang membuka wawasan anda mengenai penggunaan plastik secara baik dan benar. Anda juga dapat menggunakan fitur lain seperti lapor untuk mengadukan suatu tindakan merugikan yang berhubungan dengan penggunaan plastik</p>
+                            <p className="lh-sm">
+                                Bergabunglah dengan platform kami dan nikmati berbagai macam fitur yang tersedia yang dapat membantu permasalahan anda mengenai lingkungan. 
+                                Silahkan isi informasi akun anda dengan lengkap untuk dapat menjelajahi berbagai fitur yang kami sediakan. 
+                                Terimakasih dan selamat bergabung!
+                            </p>
                         </div>
 
                         <div className="col-lg-6 mb-5 mb-lg-0">
