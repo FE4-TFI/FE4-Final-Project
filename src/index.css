@@ -644,13 +644,10 @@ video{
 }
 .carousel-item{
     display:flex;
-    align-item:center;
+    align-items: center;
     justify-content: center;
     padding:30px;
     color: white;
-}
-.carousel-card{
-
 }
 .carousel-card > img{
     border-radius: 20px;
@@ -830,10 +827,6 @@ video{
 }
 h1, h2 {
     color: #333;
-  }
-  
-  main {
-    
   }
   
   section {
