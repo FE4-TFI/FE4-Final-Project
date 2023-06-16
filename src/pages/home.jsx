@@ -19,6 +19,7 @@ import keepOcean from '../assets/keepocean.png'
 import lovePlanet from '../assets/loveplanet.png'
 import noBottle from '../assets/nobottle.png'
 import bringCup from '../assets/bringcup.png'
+import Footer from './Footer'
 // End All Import
 
 
@@ -202,6 +203,7 @@ function Home() {
                 </div>
 
             </div>
+            <Footer></Footer>
         </>
     )
 }
