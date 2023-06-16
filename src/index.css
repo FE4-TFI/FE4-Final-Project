@@ -792,7 +792,6 @@ video{
     background-size: cover;
     background-repeat: no-repeat;
     height: 500px;
-    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1335,7 +1334,7 @@ h1, h2 {
 #report-head {
     background-image: linear-gradient(#EAF8FF, #F5F6FF);
     padding: 20px;
-    margin-top: 50px;
+    
     margin-left: 20px;
     margin-right: 20px;
     
