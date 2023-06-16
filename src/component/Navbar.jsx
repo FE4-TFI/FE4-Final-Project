@@ -15,6 +15,7 @@ import GotongRoyong from "../pages/GotongRoyong"
 import Stop from "../pages/Stop"
 import Perusakan from "../pages/Perusakan"
 import Efektif from "../pages/Efektif"
+import Selengkapnya from "../pages/Selengkapnya"
 
 function Navbar(){
 
@@ -37,21 +38,34 @@ function Navbar(){
         
         <div className="navbar">
 
-            <nav>
-                <a href="/" className="logo">
-                    <img src={logo} alt="logo"/>
-                    <h1>Save Environment</h1>
-                </a>
-                <div className="bx bx-menu" id="menu-icon" onClick={handlemenu}></div>
+            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+                    <div className="container">
+                        <a href="/Home" className="logo">
+                            <img src={logo} alt="logo" />
+                            <h1>Save Environment</h1>
+                        </a>
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul className="navbar-nav " style={{ 'backgroundColor': 'white', 'marginLeft': 'auto' }}>
 
-                <ul className="navbar">
-                    <li><NavLink className="linknav" to="/Home"> Home </NavLink></li>
-                    <li><NavLink className="linknav" to="/Edukasi"> Edukasi </NavLink></li>
-                    <li><NavLink className="linknav" to="/Lapor"> Lapor </NavLink></li>
-                    <li><NavLink className="linknav" to="/Login"> Login </NavLink></li>
-                    
-                </ul>
-                
+
+                                <li className="nav-item">
+                                    <NavLink className="linknav " to="/Home"> Home </NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink className=" linknav" to="/Edukasi"> Edukasi </NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink className="linknav " to="/Lapor"> Lapor </NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink className="linknav " to="/Login"> Login </NavLink>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
             </nav>
 
 
@@ -102,6 +116,7 @@ function Navbar(){
         <Route path="/Stop" element={<Stop />} />
         <Route path="/Perusakan" element={<Perusakan />} />
         <Route path="/Efektif" element={<Efektif />} />
+        <Route path="/Selengkapnya" element={<Selengkapnya />} />
         {/* <Route path="/Edukasi" element={<ListEdukasi />} />
         <Route path="/Edukasi/:title" element={<Edukasi/>} /> */}
         <Route path="*" element={<NotFound />} />

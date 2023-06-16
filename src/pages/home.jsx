@@ -35,7 +35,7 @@ function Home() {
                     <div className="text-banner">
                         <h1> Jadilah anak muda yang cinta Lingkungan</h1>
                         <p> Ayo bersama kurangi sampah demi kesehatan lingkungan yang lebih baik</p>
-                        <a className="btn-showmore" href=''> Selengkapnya </a>
+                        <a className="btn-showmore" onClick={() => navigate("/Selengkapnya")}> Selengkapnya </a>
                     </div>
 
                     <div className="img-banner">

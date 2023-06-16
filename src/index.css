@@ -48,7 +48,6 @@ nav{
 .linknav{
     font-size: 1rem;
     padding: 20px;
-    
     color: #003366;
     font-weight:bold;
     text-decoration: none;
@@ -1399,9 +1398,7 @@ h1, h2 {
     /* background-image: linear-gradient(#EAF8FF, #F5F6FF); */
     
 }
-.about-img{
 
-}
 .about-img img{
     border-radius: 20px;
     width: 400px;
@@ -1445,3 +1442,8 @@ h1, h2 {
     
 }
 
+@media screen and (max-width: 436px) {
+    .logo > h1{
+        font-size: 20px;
+    }
+}
