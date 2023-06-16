@@ -15,14 +15,8 @@ import GotongRoyong from "../pages/GotongRoyong"
 import Stop from "../pages/Stop"
 import Perusakan from "../pages/Perusakan"
 import Efektif from "../pages/Efektif"
-import { useState } from "react"
 
 function Navbar(){
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    const handleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
 
     let menu = document.querySelector('#menu-icon');
     let navbar = document.querySelector('.navbar');
