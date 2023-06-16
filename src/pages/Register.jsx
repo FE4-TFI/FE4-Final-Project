@@ -76,9 +76,8 @@ const RegisterForm = () => {
             <div className="container">
                 <div className="row gx-lg-5 align-items-center">
                     <div className="col-lg-6 mb-5 mb-lg-0">
-                        <h1 className="my-5 display-3 fw-bold ls-tight">SAVI<br />
-                            <h5 className="text-primary">Save Environment</h5>
-                        </h1>
+                        <h1 className="my-5 display-3 fw-bold ls-tight">SAVI<br /></h1>
+                        <h5 className="text-primary">Save Environment</h5>
                         <p className="lh-sm">Save Environment menyediakan artikel edukasi yang membuka wawasan anda mengenai penggunaan plastik secara baik dan benar. Anda juga dapat menggunakan fitur lain seperti lapor untuk mengadukan suatu tindakan merugikan yang berhubungan dengan penggunaan plastik</p>
                     </div>
                     <div className="col-lg-6 mb-5 mb-lg-0">

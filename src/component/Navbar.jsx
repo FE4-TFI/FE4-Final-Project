@@ -1,4 +1,4 @@
-import { NavLink, Route, Routes } from "react-router-dom"
+import { Link, NavLink, Route, Routes } from "react-router-dom"
 import Home from "../pages/home"
 import ListEdukasi from "../pages/ListEdukasi"
 import Lapor from "../pages/Lapor"
@@ -40,10 +40,10 @@ function Navbar(){
 
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                     <div className="container">
-                        <a href="/Home" className="logo">
+                        <Link to="/Home" className="logo">
                             <img src={logo} alt="logo" />
                             <h1>Save Environment</h1>
-                        </a>
+                        </Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
