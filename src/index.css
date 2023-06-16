@@ -140,6 +140,7 @@ nav{
     background-image: linear-gradient(to bottom, #55A0B9, white);
     background-size: cover;
     height: 1000px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -228,6 +229,7 @@ nav{
 marquee{
     background-color: #24262b;
     height: 50px;
+    width: 100%;
     display: flex;
     align-items: center;
     color: white;
@@ -273,7 +275,7 @@ marquee{
     align-items: center;
     justify-content: center;
     margin: 50px;
-    width: 1400px;
+    width: 100%;
     height: fit-content;
     gap: 40px;
 }
@@ -284,7 +286,7 @@ marquee{
     justify-content: center;
     background-color: white;
     height: 400px;
-    width: fit-content;
+    max-width: 500px;
     padding: 50px;
     border-radius: 10px;
 }
@@ -317,6 +319,7 @@ marquee{
     align-items: center;
     justify-content: center;
     padding: 100px;
+    width: 100%;
 }
 .title-why{
     margin-bottom: 50px;
@@ -333,9 +336,6 @@ marquee{
     align-items: center;
     justify-content: space-evenly;
     text-align: justify;
-    gap: 50px;
-    max-width: 1500px;
-    height: fit-content;
     width: 100%;
     background-image: linear-gradient(#EAF8FF, #F5F6FF);
     border-radius: 30px;
@@ -345,11 +345,7 @@ marquee{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    background-color: transparent;
-    padding: 20px;
-    height: fit-content;
-    width: 500px;
+    width: fit-content;
     gap: 10px;
 }
 .image-desc{
@@ -358,8 +354,6 @@ marquee{
     align-items: center;
     justify-content: center;
     gap: 10px;
-    max-height: 200px;
-    max-width: 400px;
 }
 .image-desc:hover{
     animation: animate 3s linear infinite;
@@ -376,31 +370,27 @@ marquee{
 .desc > h2{
     font-family: "Poppins", sans-serif;
     text-transform: capitalize;
-    width: 250px;
+    
     
 }
 .desc > p{
     font-family: "Poppins", sans-serif;
+    
 }
 .slice-why2{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: transparent;
-    height: 400px;
-    width: 400px;
+    width: fit-content;
+    height: fit-content;
 }
 .slice-why3{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    background-color: transparent;
-    height: fit-content;
-    width: 400px;
+    width: fit-content;
     gap: 10px;
-    padding: 20px;
 }
 
     /* VIDEO 3R */
@@ -414,12 +404,14 @@ marquee{
     padding: 50px;
     height: fit-content;
     gap: 50px;
+    width: 100%;
 }
 .isi-video{
     display: flex;
-    width: 1400px;
-    margin-left: 50px;
-    background-color: transparent;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 50px;
 }
 .videobanner > h1{
     position: absolute;
@@ -441,6 +433,7 @@ marquee{
 }
 .btn-selengkapnya:hover{
     padding:20px;
+    cursor: pointer;
 }
 video{
     width: 550px;
@@ -452,8 +445,7 @@ video{
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    padding-right: 50px;
-    padding-left: 50px;
+    
 }
 .text-video > h1{
     font-family: "Poppins", sans-serif;
@@ -465,7 +457,7 @@ video{
     font-family: "Poppins", sans-serif;
     font-weight: lighter;
     color: white;
-    max-width: 740px;
+    width: 90%;
     text-align: justify;
     
 }
@@ -570,6 +562,9 @@ video{
     flex-direction: column;
     align-items: center;
 }
+.partnership:hover{
+    cursor: pointer;
+}
 .title-partnership{
     display: flex;
     flex-direction: column;
@@ -586,11 +581,15 @@ video{
 }
 .isi-partnership{
     display: flex;
+    justify-content: center;
+    
     flex-direction: row;
-    padding-right: 0px;
+    padding:10px;
+    width: 100%;
 }
 .isi-partnership:hover{
     background-color: white;
+    width: fit-content;
     border-radius: 30px;
     animation: animate 3s linear infinite;
 }
@@ -613,6 +612,7 @@ video{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: fit-content;
 }
 .detail-partnership > h1{
     font-family: "Poppins", sans-serif;
@@ -1013,7 +1013,26 @@ h1, h2 {
           color: #003366;
           width: fit-content;
       }
-      
+
+    /* RESPONSIVE TUJUAN SAVI */
+    .container-tujuan{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .isi-gambar{
+        width: max-content;
+        max-width: 100%;
+    }
+
+    /* END RESPONSIVE TUJUAN SAVI */
+
+    /* RESPONSIVE VIDEO BANNER */
+
+    .videobanner{
+        width: 100%;
+    }
+    
       
   }
   @media screen and (max-width: 768px) {
@@ -1038,6 +1057,7 @@ h1, h2 {
     .text-banner > h1{
         font-size: 2em;
     }
+    
     /* RESPONSIVE ACARA */
     .cardhome{
         display: flex;
@@ -1070,19 +1090,45 @@ h1, h2 {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        
+    }
+    .isi-video > video{
+        width: 300px;
     }
     .text-video{
         display: flex;
-        justify-content: flex-start;
+        
+    }
+    .text-video > h1{
+        max-width: 550px;
+        font-size:15px;
     }
     .text-video > h2{
-        max-width: 550px
+        max-width: 550px;
+        font-size:10px;
     }
     /* END RESPONSIVE VIDEO BANNER 3R */
+
+    /* RESPONSIVE WHY */
+    .image-desc > img{
+        width: 100px;
+        height: 100px;
+
+    }
+    .slice-why2 > img{
+        width: 100px;
+        height: 100px;
+    }
+    .desc > h2{
+        font-size: 15px;
+    }
+    .desc > p{
+        font-size: 10px;
+        max-width: 100px;
+    }
   }
   
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 486px) {
   
     main {
       padding: 10px;
@@ -1113,9 +1159,15 @@ h1, h2 {
         color: #003366;
         width: fit-content;
     }
+    .first-banner{
+        width: 100%;
+    }
     .img-banner > img{
         width: 200px;
         margin-bottom: 100px;
+    }
+    .text-banner{
+        width: 100%;
     }
     .text-banner > h1{
         font-size: 2em;
@@ -1144,7 +1196,17 @@ h1, h2 {
     /* END RESPONSIVE TUJUAN SAVI */
 
     /* RESPONSIVE WHY */
+    .title-why{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 20px;
 
+    }
+    .title-why > h1{
+        font-size: 0.8em;
+        width: fit-content;
+    }
     .isi-why{
         display: flex;
         flex-direction: column;
@@ -1152,7 +1214,14 @@ h1, h2 {
     .image-desc{
         width: fit-content;
     }
+    .image-desc > img{
+        width: 100px;
+        height: 100px;
+    }
     .desc{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         max-width: 200px;
     }
     .desc > h2{
@@ -1199,7 +1268,7 @@ h1, h2 {
         align-items: center;
     }
     .isi-video > video{
-        width: 300px;
+        width: 100%;
     }
     .text-video{
         display: flex;
@@ -1214,6 +1283,36 @@ h1, h2 {
         max-width: 300px
     }
     /* END RESPONSIVE VIDEO BANNER 3R */
+
+    /* RESPONSIVE PARTNERSHIP */
+
+    .logo-partnership{
+        width: fit-content;
+
+    }
+    .isi-partnership{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .logo-partnership > img{
+        width: 130px;
+    }
+    .detail-partnership{
+        width: fit-content;
+        max-width: 200px;
+    }
+    .detail-partnership > h1{
+        font-size: 15px;
+    }
+    .detail-partnership > h2{
+        font-size: 10px;
+    }
+    .marquee1 ,.marquee2{
+        width: 100px;
+        margin-bottom: 100px;
+    }
+    /* END RESPONSIVE PARTNERSHIP */
   
   }
   /* END RESPONSIVE */
@@ -1286,7 +1385,6 @@ h1, h2 {
 /* About */
 .about-section{
     width: 100%;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1299,11 +1397,9 @@ h1, h2 {
     justify-content: space-between;
     flex-wrap: wrap;
     /* background-image: linear-gradient(#EAF8FF, #F5F6FF); */
-    max-width: 1400px;
     
 }
 .about-img{
-    padding: 50px;
 
 }
 .about-img img{
